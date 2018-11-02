@@ -12,4 +12,6 @@ public class DailyWorkingHours {
     private final WorkDay workDay;
     private final WorkStartTime workStartTime;
     private final WorkEndTime workEndTime;
+
+    public 
 }
