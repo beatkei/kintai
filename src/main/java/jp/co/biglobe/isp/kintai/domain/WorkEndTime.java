@@ -10,5 +10,6 @@ import java.time.LocalTime;
 @EqualsAndHashCode
 @ToString
 public class WorkEndTime {
+
     private final LocalTime value;
 }

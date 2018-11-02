@@ -10,5 +10,6 @@ import java.time.LocalDate;
 @EqualsAndHashCode
 @ToString
 public class WorkDay {
+
     private final LocalDate value;
 }

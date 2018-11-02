@@ -4,12 +4,12 @@ import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
-import java.time.LocalTime;
-
 @RequiredArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class WorkStartTime {
+public class DailyWorkingHours {
 
-    private final LocalTime value;
+    private final WorkDay workDay;
+    private final WorkStartTime workStartTime;
+    private final WorkEndTime workEndTime;
 }

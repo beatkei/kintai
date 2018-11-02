@@ -7,8 +7,7 @@ import lombok.ToString;
 @RequiredArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class WorkingHours {
-    private final WorkDay workDay;
-    private final WorkStartTime workStartTime;
-    private final WorkEndTime workEndTime;
+public class TotalMonthlyOvertimeHours {
+
+    private final Integer values;
 }

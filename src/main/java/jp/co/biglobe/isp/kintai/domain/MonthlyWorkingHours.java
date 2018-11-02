@@ -4,12 +4,11 @@ import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
-import java.time.LocalTime;
-
 @RequiredArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class WorkStartTime {
+public class MonthlyWorkingHours {
 
-    private final LocalTime value;
+    private final TotalMonthlyWorkHours totalMonthlyWorkHours;
+    private final TotalMonthlyOvertimeHours totalMonthlyOvertimeHours;
 }
