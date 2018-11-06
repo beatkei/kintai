@@ -1,6 +1,7 @@
 package jp.co.biglobe.isp.kintai.domain;
 
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
@@ -11,5 +12,6 @@ import java.time.LocalTime;
 @ToString
 public class WorkEndTime {
 
+    @Getter
     private final LocalTime value;
 }
