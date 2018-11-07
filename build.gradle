@@ -6,6 +6,7 @@ plugins {
 
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'groovy'
 
 
 version '1.0-SNAPSHOT'
@@ -17,9 +18,28 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
     compileOnly "org.projectlombok:lombok:1.18.4"
     compile("org.springframework.boot:spring-boot-starter")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.12'
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+}
+
+sourceSets {
+//    main {
+//        java.srcDirs = []
+//        groovy.srcDirs = ['src/main/java']
+//        resources {
+//            srcDir 'src/main/java'
+//        }
+//        // TomcatがContextを自動リロードするために、クラスファイルの出力先を変更
+//        //output.classesDir = 'src/main/webapp/WEB-INF/classes'
+//    }
+
+    test {
+        java.srcDirs = []
+        groovy.srcDirs = ['src/test/groovy', 'src/test/java']
+    }
 }
 
