@@ -1,18 +1,19 @@
 package jp.co.biglobe.isp.kintai.datasource
 
-import jp.co.biglobe.isp.kintai.domain.DailyWorkingHours
-import jp.co.biglobe.isp.kintai.domain.DailyWorkingHoursRepository
-import jp.co.biglobe.isp.kintai.domain.WorkDay
-import jp.co.biglobe.isp.kintai.domain.WorkEndTime
-import jp.co.biglobe.isp.kintai.domain.WorkStartTime
+import jp.co.biglobe.isp.kintai.domain.*
+import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ContextConfiguration
+import org.springframework.test.context.junit4.SpringRunner
 import spock.lang.Specification
 
 import java.time.LocalDate
 import java.time.LocalTime
 
-@ContextConfiguration
+//@RunWith(SpringRunner.class)
+@SpringBootTest
+//@ContextConfiguration
 class DailyWorkingHoursRepositoryFileTest extends Specification {
 
     @Autowired

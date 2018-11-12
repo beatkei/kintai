@@ -2,12 +2,14 @@ package jp.co.biglobe.isp.kintai.datasource;
 
 import jp.co.biglobe.isp.kintai.domain.DailyWorkingHours;
 import jp.co.biglobe.isp.kintai.domain.DailyWorkingHoursRepository;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-@Component
+@SpringBootApplication
+//@Component
 public class DailyWorkingHoursRepositoryFile implements DailyWorkingHoursRepository {
 
     @Override
