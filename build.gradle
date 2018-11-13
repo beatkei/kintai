@@ -1,16 +1,21 @@
-
-//plugins {
-//    id 'java'
-//    id 'org.springframework.boot' version '2.1.0.RELEASE'
-//}
+buildscript {
+    ext {
+        springBootVersion = '2.1.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
 
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
-apply plugin: 'groovy'
 
 version '1.0-SNAPSHOT'
-
 sourceCompatibility = 1.8
 
 repositories {
@@ -21,8 +26,10 @@ dependencies {
     // Lombok用
     compileOnly 'org.projectlombok:lombok:1.18.4'
     // SpringBoot用
-    compile 'org.springframework.boot:spring-boot-starter'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    //compile 'org.springframework.boot:spring-boot-starter'
+    //testCompile 'org.springframework.boot:spring-boot-starter-test'
+    implementation('org.springframework.boot:spring-boot-starter')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
     // Spock用
     testCompile 'org.codehaus.groovy:groovy-all:2.4.12'
     testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
